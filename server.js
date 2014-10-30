@@ -261,11 +261,10 @@ app.use(function(err, req, res, next) {
   res.send(500, { message: err.message });
 });
 
-<<<<<<< HEAD
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
-=======
-// Step 10
+});
+
 agenda.define('send email alert', function(job, done) {
   Show.findOne({ name: job.attrs.data }).populate('subscribers').exec(function(err, show) {
     var emails = show.subscribers.map(function(user) {
@@ -305,5 +304,6 @@ agenda.on('start', function(job) {
 
 agenda.on('complete', function(job) {
   console.log("Job %s finished", job.attrs.name);
->>>>>>> 9ea066b89690201744926b530e318e612b2192e4
 });
+
+

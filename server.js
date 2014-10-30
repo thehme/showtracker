@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var agenda = require('agenda')({ db: { address: 'localhost:27017/test' } });
+var sugar = require('sugar');
+var nodemailer = require('nodemailer');
 
 var showSchema = new mongoose.Schema({
   _id: Number,

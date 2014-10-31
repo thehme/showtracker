@@ -13,6 +13,8 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+var compress = require('compression');
+
 var showSchema = new mongoose.Schema({
   _id: Number,
   name: String,
@@ -76,16 +78,33 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+//app.set('port', process.env.PORT || 3000);
+//app.use(logger('dev'));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded());
+//app.use(cookieParser());
+
+//app.use(session({ secret: 'keyboard cat' }));
+//app.use(passport.initialize());
+//app.use(passport.session());
+//app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('port', process.env.PORT || 3000);
+app.use(compress())
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-
 app.use(session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 86400000 }));
+app.use(function(req, res, next) {
+  if (req.user) {
+    res.cookie('user', JSON.stringify(req.user));
+  }
+  next();
+});
 
 
 app.get('/api/shows', function(req, res, next) {

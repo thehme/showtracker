@@ -19,7 +19,7 @@ Bug Fixes:
 
 2. Some libraries and methods seem to have depracated, so these should be udpated
 
-3. Sometimes, when adding a new show, it takes several seconds and then the server crashes with the following error
+3. Sometimes, when adding a new show, when one clicks on Home to go back, the server crashes with the following error
 
 ```
 TypeError: Cannot read property 'message' of undefined 

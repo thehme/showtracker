@@ -15,6 +15,9 @@ Enhancement Ideas:
 
 7. Shows list when the next episode is coming, disambiguate if this is the next NEW episode (see bug #4)
 
+8. On logout, we should not see the shows of the person who was logged in before, e.g. even me, it should show the top shows of all users or the top shows based on the shows db
+
+
 Bug Fixes:
 
 1. Server crashed sometimes when adding a new show when signed in (need to check if when signed out)

@@ -13,6 +13,8 @@ Enhancement Ideas:
 
 6. Ability to change frequency or time of alerts
 
+7. Shows list when the next episode is coming, disambiguate if this is the next NEW episode (see bug #4)
+
 Bug Fixes:
 
 1. Server crashed sometimes when adding a new show when signed in (need to check if when signed out)
@@ -34,3 +36,7 @@ at Promise.resolve (/showtracker/node_modules/mongoose/lib/promise.js:113:23)
 at Promise.<anonymous> (/showtracker/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
 at Promise.emit (events.js:95:17)
 ```
+
+4. Shows list when the next episode is occurring, but there are repeats, and according to TV Guide, sometimes NEW episodes are occurring sooner than the app is calculating right now.
+
+

@@ -1,6 +1,6 @@
 {
   "name": "showtrackr",
-  "version": "0.0.0",
+  "version": "0.0.0-5",
   "private": true,
   "scripts": {
     "start": "node server.js"
@@ -35,5 +35,9 @@
     "gulp-plumber": "^0.6.6",
     "gulp-sass": "^1.2.0",
     "gulp-uglify": "^1.0.1"
+  },
+  "subdomain": "showtracker",
+  "engines": {
+    "node": "^0.10.0"
   }
 }

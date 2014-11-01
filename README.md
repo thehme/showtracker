@@ -16,4 +16,5 @@ Enhancement Ideas:
 Bug Fixes:
 
 1. Server crashed sometimes when adding a new show when signed in (need to check if when signed out)
+
 2. Some libraries and methods seem to have depracated, so these should be udpated

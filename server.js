@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 // var agenda = require('agenda')({ db: { address: 'localhost:27017/test' } });
 // mongodb://<dbuser>:<dbpassword>@ds047800.mongolab.com:47800/showtracker
-var agenda = require('agenda')({ db: { address: 'mongodb://ourdevapps:node!123@ds047800.mongolab.com:47800/showtracker' } });
+var agenda = require('agenda')({ db: { address: 'mongodb://ourdevappsadmin:node!1234@ds047950.mongolab.com:47950/showtracker' } });
 var sugar = require('sugar');
 var nodemailer = require('nodemailer');
 
@@ -72,7 +72,7 @@ var Show = mongoose.model('Show', showSchema);
 
 // mongoose.connect('localhost');
 // mongodb://<dbuser>:<dbpassword>@ds047800.mongolab.com:47800/showtracker
-mongoose.connect('mongodb://ourdevapps:node!123@ds047800.mongolab.com:47800/showtracker'); 
+mongoose.connect('mongodb://ourdevappsadmin:node!1234@ds047950.mongolab.com:47950/showtracker'); 
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');

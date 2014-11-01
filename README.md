@@ -18,3 +18,19 @@ Bug Fixes:
 1. Server crashed sometimes when adding a new show when signed in (need to check if when signed out)
 
 2. Some libraries and methods seem to have depracated, so these should be udpated
+
+3. Sometimes, when adding a new show, it takes several seconds and then the server crashes with the following error
+
+```
+TypeError: Cannot read property 'message' of undefined 
+at /showtracker/server.js:320:46
+at Nodemailer.sendMail (/showtracker/node_modules/nodemailer/src/nodemailer.js:85:16)
+at Promise.<anonymous> (/showtracker/server.js:319:19)
+at Promise.<anonymous> (/showtracker/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+at Promise.emit (events.js:95:17l)
+at Promise.emit (/showtracker/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+at Promise.fulfill (/showtracker/node_modules/mongoose/node_modules/mpromise/lib/promise.js:97:20)
+at Promise.resolve (/showtracker/node_modules/mongoose/lib/promise.js:113:23)
+at Promise.<anonymous> (/showtracker/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+at Promise.emit (events.js:95:17)
+```

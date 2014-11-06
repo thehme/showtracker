@@ -1,3 +1,10 @@
+This project was created by following the step-by-step, and sometimes not so clear steps, of the tutorial at http://sahatyalkabov.com/create-a-tv-show-tracker-using-angularjs-nodejs-and-mongodb/
+
+During the course of creating file, typing in code, downloading modules, and other libraries, we've encountered some issue. Here we document the enhancements we'd like to work on, as well as some of the problems we see with the project, so we can try to enhance it, as we learn MEAN.
+
+NOTE: This project was not forked from the github repo indicated in the link above.
+
+
 Enhancement Ideas:
 
 1. Should be able to view top shows on what? the db api, in general?

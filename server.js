@@ -74,8 +74,11 @@ var Show = mongoose.model('Show', showSchema);
 // mongodb://<dbuser>:<dbpassword>@ds047800.mongolab.com:47800/showtracker
 mongoose.connect('mongodb://ourdevappsadmin:node!1234@ds047950.mongolab.com:47950/showtracker'); 
 var express = require('express');
+// this module contains utilites for handling and transforming file paths.
 var path = require('path');
+// HTTP request logger middleware for node.js, e.g. morgan(format,options)
 var logger = require('morgan');
+// Parse Cookie header and populate req.cookies with an object keyed by the cookie names.
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
